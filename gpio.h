@@ -2,13 +2,11 @@ typedef enum{
     GPIO_DIR_INPUT=0,
     GPIO_DIR_OUTPUT
 } GPIO_DIRECTION;
-char* GPIO_DIRECTION_MAP[] = {"INPUT","OUTPUT"};
 
 typedef enum{
     GPIO_LOW=0,
     GPIO_HIGH
 } GPIO_VALUE;
-char* GPIO_VALUE_MAP[] = {"LOW","HIGH"};
 
 typedef enum{
     GPIO_EDGE_NONE,GPIO_EDGE_RISING,GPIO_EDGE_FALLING,GPIO_EDGE_BOTH
@@ -38,4 +36,4 @@ GPIO_VALUE gpio_get_value(gpio_pin* gpio);
 int gpio_set_active_low(gpio_pin* gpio);
 int gpio_set_active_high(gpio_pin* gpio);
 // Software debounce only
-void gpio_set_debounce_time(gpio_pin* gpio,int time){gpio->debounce_time = time;}
+void gpio_set_debounce_time(gpio_pin* gpio,int time);
